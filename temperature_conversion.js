@@ -24,4 +24,3 @@ newton = Math.floor(newton)
 console.log(`The temperature is ${newton} degrees Newton.`)
 
 
-//completed
