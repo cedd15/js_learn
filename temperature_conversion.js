@@ -17,9 +17,9 @@ console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
 //convert celsius to newton
 let newCelsius = 30
 
-let newton = newCelsius * (33 / 100)
+let newton = newCelsius * (33 / 100) // converts c to newton
 
-newton = Math.floor(newton)
+newton = Math.floor(newton) //rounds down newton
 
 console.log(`The temperature is ${newton} degrees Newton.`)
 
