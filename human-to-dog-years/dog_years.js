@@ -8,19 +8,19 @@ Each year following equates to 4 dog years.
 Before you start doing the math in your head, let a computer take care of it! With your knowledge of math operators and variables, use JavaScript to convert your human age into dog years.
 */
 
-const myAge = 23; // this is my age
+const myAge = window.prompt("Enter your age: ") // this is my age
 let earlyYears = 2; // this is early years age
 earlyYears = earlyYears * 10.5;
 
 let laterYears = myAge - 2; //  accounted for the first two years
 laterYears = laterYears * 4; //following year is multiplied by 4
 
-console.log(earlyYears)
-console.log(laterYears)
+document.write("Early Years: " + earlyYears)
+document.write("\nLater Years: " + laterYears)
 
 let myAgeInDogYears = earlyYears + laterYears; // my age converted to dog years
 
 myName = "Cedd".toLowerCase(); //my name in lower case
 
-console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
+document.write(`\nMy name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
 
