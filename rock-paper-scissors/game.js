@@ -1,6 +1,6 @@
 const getUserChoice = userInput => {
     userInput =  userInput.toLowerCase();
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
       return userInput;
     } else {
         document.write('Invalid input.')
@@ -22,7 +22,6 @@ const getUserChoice = userInput => {
           return 'scissors'
             break;
       } 
-      
   
   }
   
@@ -31,6 +30,10 @@ const getUserChoice = userInput => {
     if (userChoice === computerChoice) {
       return 'The game was a tie.';
     } 
+
+    if (userChoice === 'bomb') {
+      return 'Cheat code activated! You won!'
+    }
   
     if (userChoice === 'rock') {
       if (computerChoice === 'paper') {
