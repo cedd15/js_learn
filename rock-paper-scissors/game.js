@@ -1,3 +1,4 @@
+// asks user to input their choice
 const getUserChoice = userInput => {
     userInput =  userInput.toLowerCase();
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
@@ -8,7 +9,7 @@ const getUserChoice = userInput => {
   };
 
 
-
+// obtains computer choice
   const getComputerChoice = ()  => {
     randomNumber = Math.floor(Math.random() * 3);
       switch (randomNumber) {
@@ -25,7 +26,7 @@ const getUserChoice = userInput => {
   
   }
   
-  
+  // determines the winner; compares user's choice vs computer's
   const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
       return 'The game was a tie.';
@@ -61,7 +62,7 @@ const getUserChoice = userInput => {
   }
   
   
-  
+  //outputs who wins or loses or it's a tie
   const playGame = () => {
     const userChoice = getUserChoice(window.prompt("Enter your choice: "));
     const computerChoice = getComputerChoice();

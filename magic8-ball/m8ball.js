@@ -1,15 +1,16 @@
 // Magic 8 Ball project to test if/else or switch statements
 
-let userName = window.prompt("Enter your name: ");
+let userName = window.prompt("Enter your name: ").toUpperCase();
 if (userName) {
   document.write(`Hello ${userName}!\n`);
 } else {
   document.write('Hello!');
 }
 
-const userQuestion = 'Will I become a werewolf tonight?';
+const userQuestion = 'Will I become a werewolf tonight?'.toUpperCase();
 document.write(`The user ${userName} asked: ${userQuestion} \n`);
 
+//generates a random number and makes sure it doesn't exceed 7
 let randomNumber = Math.floor(Math.random() * 8);
 let eightBall = '';
 

@@ -1,9 +1,9 @@
 const myAge = window.prompt("Enter your age: ") // this is my age
-let earlyYears = 2; // this is early years age
+let earlyYears = 2; // this is early years age, please check readme file for more info
 earlyYears = earlyYears * 10.5;
 
-let laterYears = myAge - 2; //  accounted for the first two years
-laterYears = laterYears * 4; //following year is multiplied by 4
+let laterYears = myAge - 2; //  accounted for the first two years, please check readme file for more info
+laterYears = laterYears * 4; //following year is multiplied by 4, please check readme file for more info
 
 document.write("Early Years: " + earlyYears)
 document.write("\nLater Years: " + laterYears)
