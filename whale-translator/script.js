@@ -5,13 +5,14 @@ const vowels = ['a', 'e', 'i', 'o', 'u']
 
 let resultArray = []
 
+// compares input and vowels and take only the vowels
 for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
     for (let vowelsIndex = 0; vowelsIndex < vowels.length; vowelsIndex++){
         if (input[inputIndex] === vowels[vowelsIndex]) { 
                 if (input[inputIndex] === 'e') {
-                    resultArray.push('ee')
+                    resultArray.push('ee') // doubles 'e'
                 } else if (input[inputIndex] === 'u') {
-                    resultArray.push('uu')
+                    resultArray.push('uu') // doubles 'u'
                 } else {
                     resultArray.push(input[inputIndex])
                 }
