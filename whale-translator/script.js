@@ -22,3 +22,4 @@ for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
 }
 
 document.write(resultArray.join('').toUpperCase())
+// should print all vowels and double the e's and u's
