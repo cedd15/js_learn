@@ -34,7 +34,7 @@ const validateCred = array => {
 
 console.log(validateCred(test))
 
-
+//test
 
 
 
