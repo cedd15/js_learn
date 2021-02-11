@@ -18,11 +18,13 @@ const howOld = (age, year) => {
     }
   }
   
-let enterAge = parseInt(window.prompt("Enter your age: "))
-let enterYear = parseInt(window.prompt("Enter any year: "))
+/* let enterAge = parseInt(window.prompt("Enter your age: "))
+let enterYear = parseInt(window.prompt("Enter any year: ")) 
 
-  document.write(howOld(enterAge, enterYear));
+  document.write(howOld(enterAge, enterYear)); */
   
+  console.log(howOld(24, 2025))
+
   
   
   
