@@ -1,2 +1,2 @@
 # js_learn
-JS proj for learning purposes
+My Javascript projects for learning purposes
