@@ -28,11 +28,21 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 test = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
 
 const validateCred = array => {
-    let newArray = array.reverse().map( (val, index) => index % 2 === 0 ? val * 2 : val )
-    return newArray
+    let lastDigit = array.pop()
+    let newArray = array.reverse().map( (val, index) => {
+        if (index % 2 === 0) {
+            val *= 2
+                return val > 9 ? val -=  9 : val;
+        }  else {
+            return  val
+        } 
+    })
+    let sum = newArray.reduce( (a, b) => a + b, lastDigit )
+    return sum % 10 === 0 ? 'Valid card number' : 'Invalid card number'
+
 }
 
-console.log(validateCred(test))
+console.log(validateCred(invalid1))
 
 
 
