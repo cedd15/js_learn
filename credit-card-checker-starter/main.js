@@ -27,6 +27,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 test = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
 
+//this function checks whether the card is valid or not
 const validateCred = array => {
     let lastDigit = array.pop()
     let newArray = array.reverse().map( (val, index) => {
@@ -42,7 +43,7 @@ const validateCred = array => {
 
 }
 
-
+//this function checks which numbers are invalid and valid
 const findInvalidCards = nestedArray => {
     let invalidCards = [];
     let validCards = [];
@@ -52,24 +53,37 @@ const findInvalidCards = nestedArray => {
     return invalidCards;
 } 
 
+//this function identifies the credit card companies that have issues faulty card numbers
+const idInvalidCardCompanies = nestArray => {
+    let invalidCardCompanies = [];
+            nestArray.forEach((arr = []) => {
+                let firstDigit = arr.shift()   
+                
+                switch (firstDigit) {
+                case 3: 
+                    invalidCardCompanies.push('amex')
+                    break;
+                case 4:
+                    invalidCardCompanies.push('visa')
+                    break;
+                case 5:
+                    invalidCardCompanies.push('mastercard')
+                    break;
+                case 6:
+                    invalidCardCompanies.push('discover')
+                    break;
+                default:
+                    `Company not found`;
+                    }               
+            })
+    
+    let filteredICC = invalidCardCompanies.filter((v, i) => invalidCardCompanies.indexOf(v) === i)
+        return filteredICC
+}
 
-console.log(findInvalidCards(batch)) 
-
-/*console.log(validateCred(valid1))
-console.log(validateCred(valid2))
-console.log(validateCred(valid3))
-console.log(validateCred(valid4))
-console.log(validateCred(valid5))
-console.log(validateCred(invalid1))
-console.log(validateCred(invalid2))
-console.log(validateCred(invalid3))
-console.log(validateCred(invalid4))
-console.log(validateCred(invalid5)) 
-console.log(validateCred(mystery1))
-console.log(validateCred(mystery2))
-console.log(validateCred(mystery3))
-console.log(validateCred(mystery4))
-console.log(validateCred(mystery5)) */
+//console.log(validateCred(valid1))
+console.log(findInvalidCards(batch))
+//console.log(idInvalidCardCompanies(batch))
 
 
 
