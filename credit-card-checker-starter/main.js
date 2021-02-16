@@ -25,8 +25,6 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
-test = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
-
 //this function checks whether the card is valid or not
 const validateCred = array => {
     let lastDigit = array.pop()
@@ -35,7 +33,7 @@ const validateCred = array => {
             val *= 2
                 return val > 9 ? val -=  9 : val;
         }  else {
-            return  val
+              return val
         } 
     })
     let sum = newArray.reduce( (a, b) => a + b, lastDigit )
@@ -48,7 +46,7 @@ const findInvalidCards = nestedArray => {
     let invalidCards = [];
     let validCards = [];
     nestedArray.forEach(value => {
-        validateCred(value) === 'Invalid card number' ? invalidCards.push(value) : validCards.push(value)
+        validateCred(value) === 'Invalid card number' ? invalidCards.push(value) : validCards.push(value) 
     }) 
     return invalidCards;
 } 
@@ -80,12 +78,12 @@ const idInvalidCardCompanies = nestArray => {
     let filteredICC = invalidCardCompanies.filter((v, i) => invalidCardCompanies.indexOf(v) === i)
         return filteredICC
 }
+testCard = 4916422352962964
 
-//console.log(validateCred(valid1))
-console.log(findInvalidCards(batch))
+const numbersToArray = numbers => (numbers).toString().split("").map(Number);
+
+
+//console.log(numbersToArray(testCard))
+//console.log(validateCred(invalid1))
+//console.log(findInvalidCards(batch))
 //console.log(idInvalidCardCompanies(batch))
-
-
-
-
-
