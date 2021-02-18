@@ -13,8 +13,35 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
+const p1 = mockUpStrand();
 
+const pAequorFactory = (num, arr) => {
+  return {
+    specimenNum: num,
+    dna: arr,
+    mutate() {
+      let currentBase = this.dna[Math.floor(Math.random() * this.dna.length)]
+      let newBase = returnRandBase();
+      
+        while (currentBase === newBase) {
+          currentBase = newBase
 
+          if (currentBase !== newBase) {
+            currentBase = newBase
+            break;
+          }
+        }
+
+      return this.dna
+    },
+    
+  }
+}
+
+const pAequor1 = pAequorFactory(1, p1)
+const mutated = pAequor1.mutate()
+
+console.log(mutated)
 
 
 
