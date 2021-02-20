@@ -13,10 +13,7 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-//instances of pAequor
-const p1 = mockUpStrand();
-const p2 = mockUpStrand();
-const p3 = mockUpStrand();
+
 
 //factory function that creates a pAequor object
 const pAequorFactory = (num, arr) => {
@@ -64,24 +61,25 @@ const pAequorFactory = (num, arr) => {
       let percentage = Math.floor(cgDNA.length / this.dna.length * 100)
       return percentage >= 60 ?  true : false //if this.dna contains at least 60% of 'C' or 'G' bases, return true
     },
-
+    
   }
 }
+//function to create 30 pAequor species. this will only create one if willLikelySurvive() method is true
 
-//these are pAequor objects
-const pAequor1 = pAequorFactory(1, p1)
-const pAequor2 = pAequorFactory(1, p2)
-const pAequor3 = pAequorFactory(1, p3)
+/* const create30Instances = () => {
+  let pAequor30 = [];
+  let n = 0;
+  while (pAequor30.length < 30) {
+    const newSpecies = pAequorFactory(n, mockUpStrand());
+    n++;
+    if (newSpecies.willLikelySurvive()) {
+      pAequor30.push(newSpecies);
+    }
+  }
+  return pAequor30;
+} */
 
-
-//console.log(pAequor1.dna)
-//console.log(pAequor2.dna)
-//console.log(pAequor3.dna)
-//console.log(pAequor1.mutate())
-//console.log(pAequor1.compareDNA(pAequor2))
-console.log(pAequor1.willLikelySurvive())
-
-
+//console.log(create30Instances())
 
 
 
